@@ -1,0 +1,160 @@
+body {
+    font-family: 'Luckiest Guy', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+#countdownDisplay {
+    font-size: 3rem;
+    margin-top: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+#eventDate {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ff6a00;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#d-day {
+    background-color: #00000094;
+    border-radius: 18%;
+    width: 25%;
+    height: 3rem;
+    color: #fff;
+    border: none;
+}
+
+#d-day:hover {
+    background-color: #ffffff27;
+    color: black;
+}
+
+@keyframes pulse {
+    0% {
+        color: #fff;
+    }
+
+    50% {
+        color: #ffd700;
+    }
+
+    100% {
+        color: #fff;
+    }
+}
+
+#countdownDots {
+    display: inline-block;
+    width: 2rem;
+    text-align: left;
+    vertical-align: middle;
+    animation: dots 2s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0% {
+        content: "";
+    }
+
+    33% {
+        content: ".";
+    }
+
+    66% {
+        content: "..";
+    }
+
+    100% {
+        content: "...";
+    }
+}
+
+#celebration {
+    margin-top: 2rem;
+}
+
+
+#spinner {
+    margin: 2rem auto;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #7c6554;
+    border-right: 8px solid #382f20;
+    border-bottom: 8px solid #9e9271;
+    border-left: 8px solid #5a5940;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 3s linear infinite;
+    /* display: none; */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#spinnerOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinnerOverlay.active {
+    display: flex;
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.confetti-piece {
+    position: absolute;
+    font-size: 2rem;
+    animation: confetti-fall 4s linear forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(90vh) rotate(360deg);
+        opacity: 0;
+    }
+}

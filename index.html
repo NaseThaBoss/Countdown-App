@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <h1 id="title">Countdown to D-Day</h1>
+        <br> 
+        <div id="spinnerOverlay">
+            <div id="spinner"></div>
+        </div>
+       <input type="date" id="eventDate" />
+       <br><br>
+        <button id= "d-day" onclick="setEventDate()">Set D-Day</button>
+        <div id="countdownDisplay"></div>
+        <span id="countdownDots" style="font-size: 2rem;"></span>
+        <div id="celebration"></div>
+
+        <div id="confetti"></div>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+</html>
