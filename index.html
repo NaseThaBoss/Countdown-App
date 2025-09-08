@@ -15,9 +15,21 @@
         <div id="spinnerOverlay">
             <div id="spinner"></div>
         </div>
+        <br>
+        <select id="eventSelect">
+            <option value="Anniversary">Anniversary</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Custom">Custom</option>
+        </select>
+        <input type="text" id="customEventName" placeholder="Enter event name" style="display:none; margin-top: 10px;"/>
        <input type="date" id="eventDate" />
        <br><br>
         <button id= "d-day" onclick="setEventDate()">Set D-Day</button>
+        <br>
+        <div id="progressBarContainer" style="width: 100%; background: #eee; height: 20px; border-radius: 10px; margin: 20px;">
+            <div id="progressBar" style="height: 100%; width: 0; background: linear-gradient(to right, #ff6a00, #ee0979); border-radius: 10px;"></div>
+        </div>
         <div id="countdownDisplay"></div>
         <span id="countdownDots" style="font-size: 2rem;"></span>
         <div id="celebration"></div>
